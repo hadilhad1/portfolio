@@ -342,6 +342,8 @@ function App() {
                   alt="Muhammed Hadil T T"
                 />
               </div>
+              <span className="profile-orbit profile-orbit-secondary" aria-hidden="true"></span>
+              <span className="profile-orbit profile-orbit-primary" aria-hidden="true"></span>
             </motion.div>
           </div>
         </section>
