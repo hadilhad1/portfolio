@@ -341,13 +341,6 @@ function App() {
                   src="/assets/images/profile-photo.jpg?v=2"
                   alt="Muhammed Hadil T T"
                 />
-                <div className="profile-badges" aria-label="DevOps technologies">
-                  <span className="profile-badge badge-aws">AWS</span>
-                  <span className="profile-badge badge-gcp">GCP</span>
-                  <span className="profile-badge badge-docker">Docker</span>
-                  <span className="profile-badge badge-kubernetes">K8s</span>
-                  <span className="profile-badge badge-github">GitHub</span>
-                </div>
               </div>
             </motion.div>
           </div>
