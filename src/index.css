@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e5effc;
+  background: #050b12;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #050b12;
+  --bg-surface: rgba(10, 19, 26, 0.92);
+  --bg-elevated: rgba(15, 24, 31, 0.9);
+  --panel: rgba(18, 28, 36, 0.82);
+  --panel-strong: rgba(15, 19, 24, 0.96);
+  --panel-soft: rgba(255, 255, 255, 0.02);
+  --border: rgba(148, 163, 184, 0.2);
+  --border-strong: rgba(148, 163, 184, 0.32);
+  --text: #edf4ff;
+  --muted: #a6b5c8;
+  --accent: #7dd3fc;
+  --accent-strong: #67e8f9;
+  --accent-glow: rgba(103, 232, 249, 0.25);
+  --success: #8bf0b7;
+  --shadow: 0 30px 80px rgba(2, 6, 23, 0.7);
+  --radius: 24px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.15), transparent 30%),
+    radial-gradient(circle at top right, rgba(47, 123, 255, 0.12), transparent 25%),
+    var(--bg);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
