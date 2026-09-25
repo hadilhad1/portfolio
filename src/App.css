@@ -29,6 +29,143 @@
   z-index: 0;
 }
 
+.butterfly-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.butterfly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 12px;
+  opacity: 0.42;
+  filter: drop-shadow(0 0 8px rgba(103, 232, 249, 0.38));
+  animation: butterflyFlight 28s ease-in-out infinite;
+}
+
+.butterfly::before,
+.butterfly::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  width: 9px;
+  height: 11px;
+  border: 1px solid rgba(125, 211, 252, 0.68);
+  background: rgba(103, 232, 249, 0.11);
+}
+
+.butterfly::before {
+  left: 0;
+  border-radius: 80% 25% 70% 35%;
+  transform-origin: right bottom;
+  animation: wingLeft 0.9s ease-in-out infinite;
+}
+
+.butterfly::after {
+  right: 0;
+  border-radius: 25% 80% 35% 70%;
+  transform-origin: left bottom;
+  animation: wingRight 0.9s ease-in-out infinite;
+}
+
+.butterfly i {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  z-index: 1;
+  width: 2px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(186, 230, 253, 0.8);
+  box-shadow: 0 0 5px rgba(103, 232, 249, 0.7);
+}
+
+.butterfly-one {
+  animation-name: butterflyFlightOne;
+  animation-duration: 30s;
+  animation-delay: -8s;
+}
+
+.butterfly-two {
+  animation-name: butterflyFlightTwo;
+  animation-duration: 34s;
+  animation-delay: -22s;
+  transform: scale(0.78);
+}
+
+.butterfly-three {
+  animation-name: butterflyFlightThree;
+  animation-duration: 26s;
+  animation-delay: -14s;
+  transform: scale(0.62);
+}
+
+.butterfly-four {
+  animation-name: butterflyFlightFour;
+  animation-duration: 38s;
+  animation-delay: -28s;
+  transform: scale(0.86);
+}
+
+.butterfly-five {
+  animation-name: butterflyFlightFive;
+  animation-duration: 32s;
+  animation-delay: -18s;
+  transform: scale(0.7);
+}
+
+@keyframes butterflyFlightOne {
+  0% { transform: translate3d(-8vw, 72vh, 0) rotate(8deg) scale(0.9); }
+  25% { transform: translate3d(18vw, 48vh, 0) rotate(-8deg) scale(1); }
+  52% { transform: translate3d(52vw, 60vh, 0) rotate(12deg) scale(0.96); }
+  78% { transform: translate3d(78vw, 32vh, 0) rotate(-10deg) scale(1.02); }
+  100% { transform: translate3d(108vw, 44vh, 0) rotate(8deg) scale(0.9); }
+}
+
+@keyframes butterflyFlightTwo {
+  0% { transform: translate3d(108vw, 24vh, 0) rotate(-12deg) scale(0.78); }
+  28% { transform: translate3d(78vw, 38vh, 0) rotate(8deg) scale(0.88); }
+  56% { transform: translate3d(44vw, 20vh, 0) rotate(-8deg) scale(0.8); }
+  80% { transform: translate3d(18vw, 34vh, 0) rotate(12deg) scale(0.9); }
+  100% { transform: translate3d(-10vw, 18vh, 0) rotate(-12deg) scale(0.78); }
+}
+
+@keyframes butterflyFlightThree {
+  0% { transform: translate3d(-6vw, 18vh, 0) rotate(10deg) scale(0.62); }
+  35% { transform: translate3d(24vw, 28vh, 0) rotate(-14deg) scale(0.72); }
+  68% { transform: translate3d(62vw, 16vh, 0) rotate(8deg) scale(0.64); }
+  100% { transform: translate3d(104vw, 26vh, 0) rotate(-10deg) scale(0.62); }
+}
+
+@keyframes butterflyFlightFour {
+  0% { transform: translate3d(110vw, 76vh, 0) rotate(-8deg) scale(0.86); }
+  30% { transform: translate3d(82vw, 62vh, 0) rotate(12deg) scale(0.74); }
+  62% { transform: translate3d(46vw, 78vh, 0) rotate(-10deg) scale(0.86); }
+  100% { transform: translate3d(-8vw, 58vh, 0) rotate(8deg) scale(0.78); }
+}
+
+@keyframes butterflyFlightFive {
+  0% { transform: translate3d(26vw, 108vh, 0) rotate(10deg) scale(0.7); }
+  32% { transform: translate3d(34vw, 76vh, 0) rotate(-10deg) scale(0.78); }
+  64% { transform: translate3d(20vw, 42vh, 0) rotate(8deg) scale(0.68); }
+  100% { transform: translate3d(12vw, -10vh, 0) rotate(-8deg) scale(0.7); }
+}
+
+@keyframes wingLeft {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(-22deg); }
+}
+
+@keyframes wingRight {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(22deg); }
+}
+
 @keyframes gridShift {
   0% { transform: translate3d(0, 0, 0); opacity: 0.7; }
   100% { transform: translate3d(0, 10px, 0); opacity: 1; }
@@ -886,6 +1023,31 @@
 
   .hero-section {
     padding-top: 42px;
+  }
+
+  .butterfly {
+    width: 14px;
+    height: 10px;
+    opacity: 0.26;
+    filter: drop-shadow(0 0 6px rgba(103, 232, 249, 0.28));
+    animation-duration: 42s;
+  }
+
+  .butterfly::before,
+  .butterfly::after {
+    width: 7px;
+    height: 9px;
+  }
+
+  .butterfly i {
+    top: 3px;
+    left: 6px;
+    height: 7px;
+  }
+
+  .butterfly-four,
+  .butterfly-five {
+    display: none;
   }
 
   .hero-copy h1 {

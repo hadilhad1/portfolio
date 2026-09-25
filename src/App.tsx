@@ -257,6 +257,14 @@ function App() {
 
   return (
     <div className="page-shell">
+      <div className="butterfly-field" aria-hidden="true">
+        <span className="butterfly butterfly-one"><i /></span>
+        <span className="butterfly butterfly-two"><i /></span>
+        <span className="butterfly butterfly-three"><i /></span>
+        <span className="butterfly butterfly-four"><i /></span>
+        <span className="butterfly butterfly-five"><i /></span>
+      </div>
+
       <header className="site-header">
         <div className="container nav-wrap">
           <a href="#home" className="brand" aria-label="Muhammed Hadil T T home">
