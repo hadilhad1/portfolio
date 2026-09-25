@@ -335,31 +335,12 @@ function App() {
               animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
             >
-              <div className="visual-panel">
-                <div className="visual-head">
-                  <span className="dot dot-red"></span>
-                  <span className="dot dot-yellow"></span>
-                  <span className="dot dot-green"></span>
-                  <span className="terminal-label">deployment-flow</span>
-                </div>
-
-                <div className="flow-list" aria-label="Deployment flow">
-                  {[
-                    'DEVELOPER',
-                    'GIT',
-                    'CI / CD',
-                    'BUILD',
-                    'CONTAINER',
-                    'DEPLOY',
-                    'DATABASE + STORAGE',
-                    'PRODUCTION',
-                  ].map((item, index) => (
-                    <div key={item} className="flow-node-wrap">
-                      <div className="flow-node">{item}</div>
-                      {index < 7 && <div className="flow-arrow" aria-hidden="true">↓</div>}
-                    </div>
-                  ))}
-                </div>
+              <div className="profile-frame">
+                <img
+                  className="profile-image"
+                  src="/assets/images/profile-photo.jpg"
+                  alt="Muhammed Hadil T T"
+                />
               </div>
             </motion.div>
           </div>
