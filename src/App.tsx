@@ -338,7 +338,7 @@ function App() {
               <div className="profile-frame">
                 <img
                   className="profile-image"
-                  src="/assets/images/profile-photo.jpg"
+                  src="/assets/images/profile-photo.jpg?v=2"
                   alt="Muhammed Hadil T T"
                 />
               </div>
